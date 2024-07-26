@@ -37,6 +37,8 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Riproduz
     public void abbassaVolume() {
         if (this.volume > 0) {
             this.volume--;
+        } else {
+            System.out.println("il volume è a 0");
         }
         System.out.println("volume attuale: " + this.volume);
     }
