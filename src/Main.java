@@ -23,7 +23,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("ciao, scegli 5 oggetti multimediali tra immagini,video o audio da creare");
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Scegli il tipo di file multimediale (audio, video, immagini):");
             String tipoFile = scanner.nextLine().toLowerCase();
             switch (tipoFile) {
