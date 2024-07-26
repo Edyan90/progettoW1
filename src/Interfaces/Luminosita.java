@@ -1,7 +1,7 @@
 package Interfaces;
 
 public interface Luminosita {
-    public void show();
+    public String show();
 
     public void diminuisciLum();
 
