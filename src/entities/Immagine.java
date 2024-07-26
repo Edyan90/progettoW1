@@ -17,7 +17,7 @@ public class Immagine extends ElementoMultimediale implements Luminosita {
         String result = "";
 
         for (int i = 0; i < luminosita; i++) {
-            result += "*";
+            result += "* \n";
         }
         return titolo + result;
     }

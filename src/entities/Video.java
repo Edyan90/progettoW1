@@ -20,7 +20,7 @@ public class Video extends ElementoMultimediale implements Riproduzione, Luminos
         String result = "";
 
         for (int i = 0; i < luminosita; i++) {
-            result += "*";
+            result += "* \n";
         }
         return titolo + result;
     }

@@ -23,7 +23,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("ciao, scegli 5 oggetti multimediali tra immagini,video o audio da creare");
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("Scegli il tipo di file multimediale (audio, video, immagini):");
             String tipoFile = scanner.nextLine().toLowerCase();
             switch (tipoFile) {
@@ -69,6 +69,31 @@ public class Main {
             }
         }
 
-
+        int chooseFile;
+        while (true) {
+            System.out.println("Inserisci il numero del file che vuoi riprodurre/visualizzare!");
+            chooseFile = Integer.parseInt(scanner.nextLine());
+            if (chooseFile == 0) {
+                break;
+            }
+            int indexFile = chooseFile - 1;
+            if (indexFile < 0 || indexFile >= arrayFiles.length) {
+                System.out.println("Numero non valido. Riprova.");
+                continue;
+            }
+            ElementoMultimediale file = arrayFiles[indexFile];
+            if (arrayFiles[indexFile] instanceof Immagine) {
+                Immagine picture = (Immagine) arrayFiles[indexFile];
+                System.out.println(picture.show());
+            } else if (arrayFiles[indexFile] instanceof Video) {
+                Video clip = (Video) arrayFiles[indexFile];
+                System.out.println(clip.play());
+                System.out.println(clip.show());
+            } else if (arrayFiles[indexFile] instanceof RegistrazioneAudio) {
+                RegistrazioneAudio audio = (RegistrazioneAudio) arrayFiles[indexFile];
+                System.out.println(audio.play());
+            }
+        }
+        scanner.close();
     }
 }
